@@ -5,7 +5,7 @@
   "containerDefinitions": [
     {
       "name": "nginx",
-      "image": '$IMAGE',
+      "image": "208050583360.dkr.ecr.us-east-1.amazonaws.com/nodepaa:192",
       "memory": 256,
       "cpu": 256,
       "essential": true,
