@@ -5,7 +5,7 @@
   "containerDefinitions": [
     {
       "name": "nginx",
-      "image": "${URL}/${PROJECT}:{VERSION}",
+      "image": "${PRO}/${PROJECT}:{VERSION}",
       "memory": 256,
       "cpu": 256,
       "essential": true,
