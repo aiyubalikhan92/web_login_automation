@@ -1,6 +1,6 @@
  {
   "requiresCompatibilities": [
-   "family": "nginx",
+   "family" "nginx",
     "EC2",
     "executionRoleArn" "arn:aws:iam::208050583360:role/ecr-test-role"
   ],
