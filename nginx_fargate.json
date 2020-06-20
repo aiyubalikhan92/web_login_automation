@@ -5,7 +5,7 @@
   "containerDefinitions": [
     {
       "name": "nginx",
-      "image": "$IMAGE",
+      "image": "hippo:203",
       "memory": 256,
       "cpu": 256,
       "essential": true,
