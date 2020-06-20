@@ -5,7 +5,7 @@
   "containerDefinitions": [
     {
       "name": "aiyub",
-      "image": "hippo",
+      "image": "208050583360.dkr.ecr.us-east-1.amazonaws.com/nodepaa:218",
       "memory": 256,
       "cpu": 256,
       "essential": true,
