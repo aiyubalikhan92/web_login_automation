@@ -1,21 +1,21 @@
-# Start from a basic Ubuntu image.
-FROM ubuntu:14.04
-MAINTAINER Michael Skinner <git@mcskinner.com>
+FROM ubuntu:latest
 
-# Install NGINX.
-RUN apt-get update && \
-  apt-get -y upgrade && \
-  apt-get -y install nginx
+MAINTAINER ybmsr <ybmadhu404@gmail.com>
 
-# Tidy the configs a bit. Most importantly: don't run as daemon when inside this container.
-RUN sed -i -e "s/keepalive_timeout\s*65/keepalive_timeout 2/" /etc/nginx/nginx.conf && \
-  sed -i -e "s/keepalive_timeout 2/keepalive_timeout 2;\n\tclient_max_body_size 100m/" /etc/nginx/nginx.conf && \
-  echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
-  chown -R www-data:www-data /var/lib/nginx
+WORKDIR /usr/apps/hello-docker/
 
-# Expose ports for HTTP and HTTPS.
-EXPOSE 80
-EXPOSE 443
+RUN apt-get -y update
 
-# Spin up nginx by default.
-CMD ["nginx"]
+RUN apt-get install -y nodejs
+
+RUN apt-get install -y npm
+
+#RUN ln -s /usr/bin/nodejs /usr/bin/node........;;;;;
+
+RUN npm install -g http-server
+
+ADD . /usr/apps/hello-docker/
+
+ADD index.html /usr/apps/hello-docker/index.html
+
+CMD ["http-server", "-s"]
