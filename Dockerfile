@@ -1,6 +1,4 @@
 FROM ubuntu:latest
-
-logging:
             driver: "awslogs"
             options:
                awslogs-region: "us-east-1"
