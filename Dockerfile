@@ -1,10 +1,6 @@
 FROM ubuntu:latest
-            driver: "awslogs"
-            options:
-               awslogs-region: "us-east-1"
-               awslogs-group: "log-group"
-               awslogs-stream: "log-stream"
-
+           
+            
 WORKDIR /usr/apps/hello-docker/
 
 RUN apt-get -y update
