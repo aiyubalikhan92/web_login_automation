@@ -5,7 +5,7 @@ WORKDIR /usr/apps/hello-docker/
 
 RUN apt-get -y update
 
-RUN apt-get install nginx
+RUN apt-get docker pull nginx
 
 #RUN ln -s /usr/bin/nodejs /usr/bin/node........;;;;;
 
