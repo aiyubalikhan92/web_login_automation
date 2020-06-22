@@ -4,16 +4,20 @@ RUN apt-get install nginx -y \
 	vim \
 	net-tools \
 	curl
-EXPOSE 80
 
-           
-            
+
+MAINTAINER ybmsr <ybmadhu404@gmail.com>
+
 WORKDIR /usr/apps/hello-docker/
 
+RUN apt-get -y update
 
-COPY index.html /usr/share/nginx/html/
+
+
+
+RUN npm install -g http-server
+
 ADD . /usr/apps/hello-docker/
-
 
 ADD index.html /usr/apps/hello-docker/index.html
 
