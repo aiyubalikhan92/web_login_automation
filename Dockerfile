@@ -5,7 +5,7 @@ RUN apt-get install nginx -y \
 	net-tools \
 	curl
 EXPOSE 80
-CMD ["nginx","-g","daemon off;"]
+
            
             
 WORKDIR /usr/apps/hello-docker/
