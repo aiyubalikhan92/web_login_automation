@@ -1,6 +1,11 @@
 FROM ubuntu:latest
 
-MAINTAINER ybmsr <ybmadhu404@gmail.com>
+logging:
+            driver: "awslogs"
+            options:
+               awslogs-region: "us-east-1"
+               awslogs-group: "log-group"
+               awslogs-stream: "log-stream"
 
 WORKDIR /usr/apps/hello-docker/
 
